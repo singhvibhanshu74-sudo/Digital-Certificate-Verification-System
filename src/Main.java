@@ -1,3 +1,5 @@
+import model.Certificate;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -37,5 +39,21 @@ public class Main {
         } else {
             System.out.println("Document not found.");
         }
+
+        // ADD THIS PART HERE
+
+        System.out.println("\nCertificate Model Test:");
+
+        Certificate certificate = new Certificate(
+                "CERT001",
+                "Rahul",
+                "Computer Science",
+                "2026-01-15",
+                "2031-01-15",
+                "VALID"
+        );
+
+        certificate.displayDetails();
+
     }
 }
