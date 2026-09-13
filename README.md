@@ -1,43 +1,49 @@
-# Digital Document Verification System
+# Digital Certificate Verification System
 
-A basic Java-based Digital Document Verification System designed to store, manage, and verify digital documents using Object-Oriented Programming concepts.
+A Java-based Digital Certificate Verification System designed to store, manage, and verify digital certificates using Object-Oriented Programming, JDBC, and MySQL.
 
 ## Tech Stack
 
 - Language: Java
-- Programming Concept: Object-Oriented Programming
-- Data Structure: ArrayList
+- Programming Concept: Object-Oriented Programming (OOP)
+- GUI: Java Swing
+- Database: MySQL
+- Database Connectivity: JDBC
 - Version Control: Git / GitHub
 
-## Project Structure
+## Project Architecture
 
-digital-document-verification-system/
+```text
+             Frontend / GUI
+                    │
+                    ▼
+             Java Backend
+                    │
+             Business Logic
+                    │
+                    ▼
+                  JDBC
+                    │
+                    ▼
+                 MySQL
+
+
+Digital-Certificate-Verification-System/
 │
-├── src/                    # Java source files
-│   ├── Document.java       # Document class
-│   ├── DocumentManager.java# Document management
-│   └── Main.java           # Main program and testing
+├── src/
+│   ├── Document.java
+│   ├── DocumentManager.java
+│   ├── Main.java
+│   │
+│   ├── model/
+│   ├── dao/
+│   ├── service/
+│   └── database/
 │
-├── basic-testing.jpg       # Basic console testing result
+├── database/
+│   └── schema.sql
+│
+├── basic-testing.jpg
 │
 ├── .gitignore
 └── README.md
-
-## Architecture
-
-```text
-Main
- │
- │ creates
- ▼
-Document Objects
- │
- │ managed by
- ▼
-DocumentManager
- │
- ├── Add Document
- │
- ├── Search Document
- │
- └── Display Documents
